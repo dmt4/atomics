@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name=Atomics
+Exec=invoker -s --type=e /opt/atomics/bin/atomics
+Icon=atomics

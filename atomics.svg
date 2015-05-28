@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="80" width="80">
+ <defs>
+  <linearGradient id="hicg_overlay_grad" gradientUnits="userSpaceOnUse" x1="39.9995" y1="5.1816" x2="39.9995" y2="58.8019">
+   <stop offset="0" style="stop-color:#FFFFFF"/>
+   <stop offset="1" style="stop-color:#000000"/>
+  </linearGradient>
+  <filter id="hicg_drop_shadow">
+    <feOffset in="SourceAlpha" dx="0" dy="4"/>
+    <feGaussianBlur stdDeviation="4"/>
+	<feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.5 0" result="shadow"/>
+    <feBlend in="SourceGraphic" in2="shadow" mode="normal"/>
+  </filter>
+ </defs>
+ <g>
+  <path id="hicg_background" fill="#ffff00" d="M79,40c0,28.893-10.105,39-39,39S1,68.893,1,40C1,11.106,11.105,1,40,1S79,11.106,79,40z"/>
+  <path id="hicg_highlight" fill="#fff" opacity="0.25" d="M39.999,1C11.105,1,1,11.106,1,40c0,28.893,10.105,39,38.999,39   C68.896,79,79,68.893,79,40C79,11.106,68.896,1,39.999,1z M39.999,78.025C11.57,78.025,1.976,68.43,1.976,40   c0-28.429,9.595-38.024,38.023-38.024c28.43,0,38.024,9.596,38.024,38.024C78.023,68.43,68.429,78.025,39.999,78.025z"/>
+  <path id="hicg_overlay" opacity="0.4" fill="url(#hicg_overlay_grad)" d="M78.977,40c0,28.893-10.1,39-38.977,39S1.023,68.893,1.023,40c0-28.894,10.1-39,38.977-39S78.977,11.106,78.977,40z"/>
+ </g>
+<g transform="translate(8, 8) scale(0.8)" filter="url(#hicg_drop_shadow)">
+<title xmlns="http://www.w3.org/2000/svg">ikona-atomics</title>
+<desc xmlns="http://www.w3.org/2000/svg">Atomics</desc>
+<defs xmlns="http://www.w3.org/2000/svg">
+</defs>
+   <g xmlns="http://www.w3.org/2000/svg" fill="#ffff00" fill-opacity="1" stroke="#ffff00" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1, 0, 0, 1, 0, 0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+      <circle cx="40.0" cy="40.0" r="3.2"/>  
+      <circle cx="51.3137" cy="28.6863" r="2.4"/>
+      <circle cx="62.6274" cy="17.3726" r="1.6"/>
+      <circle cx="66.7685" cy="32.8274" r="1.6"/>
+      <circle cx="55.4548" cy="44.1411" r="2.4"/>
+      <circle cx="70.9096" cy="48.2822" r="1.6"/>
+      <circle cx="59.5959" cy="59.5959" r="1.6"/> 
+      <circle cx="44.1411" cy="55.4548" r="2.4"/> 
+      <circle cx="48.2822" cy="70.9096" r="1.6"/> 
+      <circle cx="32.8274" cy="66.7685" r="1.6"/>
+      <circle cx="28.6863" cy="51.3137" r="2.4"/>
+      <circle cx="17.3726" cy="62.6274" r="1.6"/>
+      <circle cx="13.2315" cy="47.1726" r="1.6"/>
+      <circle cx="24.5452" cy="35.8589" r="2.4"/>
+      <circle cx="9.09037" cy="31.7178" r="1.6"/>
+      <circle cx="20.4041" cy="20.4041" r="1.6"/>
+      <circle cx="35.8589" cy="24.5452" r="2.4"/>
+      <circle cx="31.7178" cy="9.09037" r="1.6"/>
+      <circle cx="47.1726" cy="13.2315" r="1.6"/>
+   </g>
+</g></svg>
