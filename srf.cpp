@@ -28,7 +28,7 @@ Srf::Srf(int bbx, int bby, QWidget *parent) :
 
     ep = -128.0;
     sg = 64.;
-    gx = 8192;
+    gx = 0.;
     gy = 0.;
     sg6 = sg*sg*sg*sg*sg*sg;
 
@@ -133,7 +133,7 @@ Srf::Srf(int bbx, int bby, QWidget *parent) :
      if (c<1) {qp.end(); return;}
 
      qp.setPen(Qt::black);
-     for (int ip = 0; ip < np; ++ip) {
+     for (int ip = 0; ip < np; ++ip) {         
          qp.setBrush(cols[ip]);
          //         qDebug() << ip << c << xs[ip+(c%3)*np] << ys[ip+(c%3)*np];
          ipc = ip+(c%3)*np;
@@ -176,7 +176,7 @@ Srf::Srf(int bbx, int bby, QWidget *parent) :
              }
 //         walls
              if (xs[ipc] < 4*sg || xs[ipc] > (bbx - 4*sg)) xs[ipn] += (6./xs[ipc]) * qPow(4*sg/xs[ipc],6.)*dt2 + (6./(xs[ipc] - bbx)) * qPow(4*sg/(xs[ipc] - bbx),6.)*dt2;
-             if (ys[ipc] < 4*sg || ys[ipc] > (bby - 4*sg)) ys[ipn] += (6./ys[ipc]) * qPow(4*sg/ys[ipc],6.)*dt2 + (6./(ys[ipc] - bbx)) * qPow(4*sg/(ys[ipc] - bby),6.)*dt2;
+             if (ys[ipc] < 4*sg || ys[ipc] > (bby - 4*sg)) ys[ipn] += (6./ys[ipc]) * qPow(4*sg/ys[ipc],6.)*dt2 + (6./(ys[ipc] - bby)) * qPow(4*sg/(ys[ipc] - bby),6.)*dt2;
 
 //             vfield
              xs[ipn] += gx * dt2;

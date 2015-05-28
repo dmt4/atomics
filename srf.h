@@ -11,12 +11,11 @@
 //#ifdef MAEMO6
   #include <QAccelerometer>
   #include <QMagnetometer>
-    namespace QtMobility {
-        class QAccelerometer;
-        class QMagnetometer;
-    }
-
-    using namespace QtMobility;
+//    namespace QtMobility {
+//        class QAccelerometer;
+//        class QMagnetometer;
+//    }
+//    using namespace QtMobility;
 
 //#endif
 

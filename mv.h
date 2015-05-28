@@ -1,7 +1,7 @@
 #ifndef MV_H
 #define MV_H
 
-#include <QtGui/QMainWindow>
+#include <QMainWindow>
 #include <srf.h>
 
 class MV : public QMainWindow
