@@ -3,10 +3,9 @@
 MV::MV(QWidget *parent)
     : QMainWindow(parent)
 {
-//    srf = new Srf(854, 480, this);
-    srf = new Srf(1920, 1080, this);
+    srf = new Srf(1080, 1920, this);
     setCentralWidget(srf);
-    resize(1920, 1080);
+    resize(1080, 1920);
 }
 
 MV::~MV()

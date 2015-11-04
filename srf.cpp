@@ -68,7 +68,7 @@ Srf::Srf(int bbx, int bby, QWidget *parent) :
 //    sen = new QAccelerometer(this);
     sen = new QMagnetometer(this);
     connect(sen, SIGNAL(readingChanged()), SLOT(set_g()));
-    sen->setDataRate ( 10 );
+    sen->setDataRate ( 16 );
     sen->start();
 //#endif
 
@@ -143,7 +143,9 @@ Srf::Srf(int bbx, int bby, QWidget *parent) :
      qp.setPen(Qt::yellow);
      qp.drawText(ev->rect(),Qt::AlignCenter,QString::number(gx)
                                       +"\n"+QString::number(gy)
-                                      +"\n"+QString::number(gz));
+                                      +"\n"+QString::number(gz)
+                                      +"\n"+QString::number(sqrt(gx*gx+gy*gy+gz*gz))
+     );
      qp.end();
 
 
@@ -204,20 +206,10 @@ Srf::Srf(int bbx, int bby, QWidget *parent) :
 
 //#ifdef MAEMO6
  void Srf::set_g() {
-     gx = 1024*sen->reading()->y();
-     gy = 1024*sen->reading()->x();
-     gz = 1024*sen->reading()->z();
-
-     gx *= 1024;
-     gy *= 1024;
-     gy -= 64;
-     gz *= 1024;
-
-
-     gx *= 64;
-     gy *= 64;
-     gz *= 64;
-
+     const long c = 1<<25;
+     gx =  c*sen->reading()->x();
+     gy = -c*sen->reading()->y();
+     gz =  c*sen->reading()->z();
 
 //     qDebug() << gx << gy;
  }

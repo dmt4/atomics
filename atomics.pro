@@ -9,6 +9,8 @@ QT       += core gui widgets sensors
 TARGET = atomics
 TEMPLATE = app
 
+QMAKE_CXXFLAGS_RELEASE = -Ofast -march=native
+QMAKE_LFLAGS_RELEASE = -Wl,-Ofast
 
 SOURCES += main.cpp\
         mv.cpp \
